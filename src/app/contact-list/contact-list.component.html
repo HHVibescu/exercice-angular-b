@@ -1,6 +1,6 @@
-<p>contact-list works!</p>
 <ul>
-    <li *ngFor="let contact of contacts">
+    <li *ngFor="let contact of contacts; let i = index">
     {{ contact.nom }} {{ contact.prenom }} - {{ contact.age }} ans - {{ contact.email }} - {{ contact.telephone }}
+    <button (click)="onDelete(i)">Supprimer</button>
     </li>
 </ul>

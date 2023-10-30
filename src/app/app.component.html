@@ -1,2 +1,3 @@
 <app-contact-form (contactAdded)="onContactAdded($event)"></app-contact-form>
-<app-contact-list [contacts]="contacts"></app-contact-list>
+<app-contact-list [contacts]="contacts" (contactDeleted)="onContactDeleted($event)"></app-contact-list>
+

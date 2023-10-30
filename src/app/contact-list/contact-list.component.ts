@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Contact } from '../contact.model';
 
 @Component({
@@ -8,4 +8,9 @@ import { Contact } from '../contact.model';
 })
 export class ContactListComponent {
   @Input() contacts: Contact[] = [];
+  @Output() contactDeleted = new EventEmitter<number>();
+
+  onDelete(index: number) {
+    this.contactDeleted.emit(index);
+  }
 }

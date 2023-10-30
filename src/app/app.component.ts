@@ -12,4 +12,8 @@ export class AppComponent {
   onContactAdded(contact: Contact) {
     this.contacts.push(contact);
   }
+
+  onContactDeleted(index: number) {
+    this.contacts.splice(index, 1);
+  }
 }

@@ -1,0 +1,9 @@
+<p>contact-form works!</p>
+<form (submit)="onSubmit()">
+    <input [(ngModel)]="contact.nom" name="nom" placeholder="Nom" required>
+    <input [(ngModel)]="contact.prenom" name="prenom" placeholder="Prénom" required>
+    <input [(ngModel)]="contact.age" name="age" placeholder="Âge" type="number" required>
+    <input [(ngModel)]="contact.email" name="email" placeholder="Email" required>
+    <input [(ngModel)]="contact.telephone" name="telephone" placeholder="Téléphone" required>
+    <button type="submit">Ajouter</button>
+</form>
